@@ -1,8 +1,8 @@
 img{
     background-size: cover;
     background-position: center center;
-    width: 70%;
-    height: 100%;
+    border-radius: 5%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,10 +10,19 @@ img{
   }
 
 
+  .icon{
+    width: 22%;
+
+  }
+
+  .pos_Place{
+    display: inline-flex;
+  }
+
   .text{
     display: block;
-    margin-left: 53%;
-    margin-top: 24%;
+    margin-left: 52%;
+    margin-top: 25%;
     font-size: 15px;
     position: absolute;
     top: 10px;
@@ -22,17 +31,39 @@ img{
 
   }
 
-  .temperatura {
-    font-size: 3rem!important;
-    margin: 0;
+
+  .weather__name{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.56rem;
+    font-weight: 600;
+    margin-left: 10%;
+    line-height: 110%;
+    color: aliceblue;
+    margin-top: 5%;
+}
+  
+
+  .weather__Place{
+
+    display: flex;
   }
 
+  .dataPlace{
+    border: inset;
+    border-radius: 5%;
+    width: 50%;
+    display: table;
+  }
 
-  .weather__container{
-    font-size: 1.56rem;
-    font-weight: 600;
-    line-height: 110%;
-    margin-top: 5%;
+  
+  .dataPlace p{
+    width: 75%;
+  }
+
+  .temperatura {
+    font-size: 4rem!important;
+    display: contents;
+    color: antiquewhite;
   }
 
   @media (max-width: 600px) {
@@ -51,6 +82,7 @@ img{
         img{
             
             background-size: cover;
+            border-radius: 5%;
             background-position: center center;
             margin-left: 10%;
             margin-top: 5%;
@@ -61,7 +93,7 @@ img{
             background: url(/src/images/backPlace.jpg);
         }
 
-        .weather__container {
+        .weather__name {
             font-size: 1.56rem;
             font-weight: 600;
             margin-right: 5%;

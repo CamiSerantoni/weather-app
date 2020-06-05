@@ -57,7 +57,7 @@ function App() {
   let componente;
   if(error) {
     //hay un error, mostrarlo
-    componente = <Error mensaje='Ambos campos son obligatorios'/>
+    componente = <Error mensaje='Estimado(a) Usuario(a) Ambos campos son necesarios'/>
   } else {
     //mostrar Clima
     componente = <Clima

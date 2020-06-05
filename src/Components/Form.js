@@ -33,15 +33,7 @@ function Formulario({datosConsulta}) {
         <form
             onSubmit={consultarClima}
         >
-            <div className=" input-field col s12">
-                <input
-                    type="text"
-                    name="ciudad"
-                    id="ciudad"
-                    onChange={handleChange}
-                />
-                <label htmlFor="ciudad">Ciudad: </label>
-             </div>
+         
              <div className="input-field col s12">
                  <select onChange={handleChange} name="pais">
                     <option value=""> Selecciona un Pais</option>
@@ -55,8 +47,21 @@ function Formulario({datosConsulta}) {
                     <option value="PE">Perú</option>
                 </select>
             </div>
+
+            <div className=" input-field col s12">
+                            <input
+                                type="text"
+                                name="ciudad"
+                                id="ciudad"
+                                onChange={handleChange}
+                            />
+                            <label htmlFor="ciudad">Ciudad: </label>
+                        </div>
+
+
+
             <div className="input-field col s12">
-                <input type="submit" className="waves-effect waves-light btn-large btn-block yellow" value="Buscar Clima"/>
+                <input type="submit" className="waves-effect btn-large btn-block  blue darken-3 " value="Buscar Clima"/>
              </div>   
          </form>   
 

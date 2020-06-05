@@ -1,6 +1,9 @@
 import React from 'react';
 import place from '../images/backPlace.jpg'
 import './CSSFolder/Weather.css'
+import velWind from '../images/wind.png';
+import hot from '../images/hot.png';
+import cold from '../images/cold.png';
 
 
 function Clima({resultado}) {
@@ -16,17 +19,19 @@ function Clima({resultado}) {
 
     return(
         <div className=" back__image">
-            <img src={place} alt="imagen de las variaciones del tiempo" className=""></img>
+            <img src={place} alt="imagen de las variaciones del tiempo"></img>
             <div className="text"> 
-            <div className="">
-            <h2 className="weather__container">  El  clima de {name} es:</h2>
+            <div className="weather__Place">     
+            <h2 className="weather__name"> {name} </h2>
             <p className="temperatura">
-                {parseInt(main.temp - kelvin, 10)} <span>&#x2103;</span>   
-            </p>
+                {parseInt(main.temp - kelvin, 10)} <span>&#x2103;</span>   </p>
+        
             </div>
-            <p>Temperatura Máxima: {parseInt(main.temp_max - kelvin, 10)} &#x2103;</p>
-            <p>Temperatura Mínima: {parseInt(main.temp_min - kelvin, 10)} &#x2103;</p>
-            <p> Velocidad del viento: {wind.speed} </p>
+            <div className="dataPlace">
+                <p className="pos_Place"><img className="icon"  src={hot} alt="icono de alta temperatura "></img>Temperatura Máxima: {parseInt(main.temp_max - kelvin, 10)} &#x2103;</p>
+                <p className="pos_Place"><img className="icon"  src={cold} alt="icono de alta temperatura "></img>Temperatura Mínima: {parseInt(main.temp_min - kelvin, 10)} &#x2103;</p>
+                <p className="pos_Place"> <img className="icon"  src={velWind} alt="velocidad del viento"></img> Velocidad del viento: {wind.speed} </p>
+            </div>
             </div>
         </div>
 
