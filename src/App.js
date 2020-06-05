@@ -84,7 +84,7 @@ function App() {
               
             </div>
 
-            <div className="yellow lighten-2 col s12 m6">
+            <div className=" col s12 m6">
                 {componente}
             </div>
           </div>

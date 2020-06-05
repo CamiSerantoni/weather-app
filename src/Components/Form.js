@@ -56,7 +56,7 @@ function Formulario({datosConsulta}) {
                 </select>
             </div>
             <div className="input-field col s12">
-                <input type="submit" className="waves-effect waves-light btn-large btn-block yellow accent-4" value="Buscar Clima"/>
+                <input type="submit" className="waves-effect waves-light btn-large btn-block yellow" value="Buscar Clima"/>
              </div>   
          </form>   
 

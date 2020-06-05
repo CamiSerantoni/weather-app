@@ -1,7 +1,67 @@
-.back__image{
-    width: 30vw;
-    padding-top: 2%;
-    height: 20vh;
+img{
+    background-size: cover;
+    background-position: center center;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/src/images/backPlace.jpg');
+  }
 
+
+  .text{
+    display: block;
+    margin-left: 53%;
+    margin-top: 24%;
+    font-size: 15px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: center;
 
   }
+
+  .temperatura {
+    font-size: 3rem!important;
+    margin: 0;
+  }
+
+
+  .weather__container{
+    font-size: 1.56rem;
+    font-weight: 600;
+    line-height: 110%;
+    margin-top: 5%;
+  }
+
+  @media (max-width: 600px) {
+   
+    .text{
+        display: block;
+        margin-left: 15%;
+        margin-top: 135%;
+        font-size: 10px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        text-align: center;
+    
+      }
+
+        img{
+            
+        background-size: cover;
+        background-position: center center;
+        margin-left: 10%;
+        width: 75%;
+        /* height: 100%; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(/src/images/backPlace.jpg);
+        }
+
+    }
+
+    
