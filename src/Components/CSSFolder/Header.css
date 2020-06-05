@@ -9,4 +9,19 @@
     margin: 2%;
   }
 
+  @media (max-width: 600px) {
+
+    h1 {
+        font-size: 3.2rem;
+        line-height: 110%;
+        margin: 2.8rem 0 1.68rem 0;
+    }
+
+    .App-header p {
+        margin-left: 5%;
+
+    }
+
+  }
+
   
