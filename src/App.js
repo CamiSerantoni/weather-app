@@ -1,65 +1,96 @@
-import React, {useState} from 'react';
-import './App.css';
-import Header from './Components/Header';
-import Form from './Components/Form';
-import Error from './Components/Error'
+import React, {useState, useEffect} from 'react';
+import Header from './Components/Header'
+import Formulario from './Components/Form';
+import Error from './Components/Error';
+import Clima from './Components/Weather';
+
 
 function App() {
+
+
+  //state principal 
+  // ciudad =state, guardarCiudad = this.setState()
+  const [ciudad, guardarCiudad] = useState('');
+  const [pais, guardarPais] = useState('');
+  const  [error, guardarError] = useState(false);
+  const [resultado, guardarResultado] =  useState({});
+
+  useEffect(() =>{
+
+    //prevenir ejecución la primera vez
+    if(ciudad === '') return;
+
+
+    const consultarAPI = async() => {
   
-  const [city, saveCity] = useState('');
-  const [country, saveCountry] = useState('');
-  const [error, saveError] = useState(false);
+      const appId='0100ece715668bd2c753a08410850c8c';
+      const url= ` https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`;
+    
   
-  
-  
-  const dataConsult = data => {
-    //validate if data its true 
+      //consultar la URL 
+      const respuesta = await fetch(url);
+      const resultado = await respuesta.json();
+      
+    guardarResultado(resultado);
    
-    if (data.city === '' || data.country === '') {
-      saveError(true);
-      return; 
-    }
-
-    //and if city and country are existing, save them 
-    saveCity(data.city);
-    saveCountry(data.country);
-    saveError(false);
   }
+
+    consultarAPI();
+}, [ciudad, pais]);
   
-  //if... 
-  let component;
-  if(error){
-    //show it
-    component = <Error message= 'Ambos cambos son necesarios'/>
 
-  }else{
-    //show weather
-    component=null;
+
+ const datosConsulta = datos => {
+  
+      //validar que ambos campos esten 
+      if(datos.ciudad ==='' || datos.pais ===''){
+        guardarError(true);
+        return; 
+      }
+      //ciudad y pais existen, agregarlos al state
+      guardarCiudad(datos.ciudad);
+      guardarPais(datos.pais);
+      guardarError(false);
+ }
+ 
+
+  let componente;
+  if(error) {
+    //hay un error, mostrarlo
+    componente = <Error mensaje='Ambos campos son obligatorios'/>
+  } else {
+    //mostrar Clima
+    componente = <Clima
+                    resultado={resultado}
+                    />;
+
   }
-
 
   return (
-    <App>
-      
-      <Header/>
-        
+    <div className="App">
+      <Header
+      titulo = 'Clima React App '
+      />
+
+
+
       <div className="contenedor-form">
         <div className="container">
           <div className="row">
-            <div className="col s12 m6">
-              <Form
-                  dataConsult={dataConsult}
+            <div className=" col s12 m6">
+              <Formulario
+                  datosConsulta={datosConsulta}
               />
               
             </div>
 
-            <div className="col s12 m6">
-                {component}
+            <div className="yellow lighten-2 col s12 m6">
+                {componente}
             </div>
           </div>
         </div>
       </div>
-    </App>
+    </div>
   );
 }
 
