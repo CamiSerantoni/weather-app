@@ -11,7 +11,9 @@ img{
 
 
   .icon{
-    width: 22%;
+    width: 10%;
+    margin-right: 5%;
+    
 
   }
 
@@ -52,13 +54,14 @@ img{
     border: inset;
     border-radius: 5%;
     width: 50%;
+    color: white;
     display: table;
   }
 
   
   .dataPlace p{
-    width: 80%;
-    margin-top: 3%;
+    width: 70%;
+    margin-top: 1%;
   }
 
   .temperatura {
@@ -68,7 +71,11 @@ img{
   }
 
   @media (max-width: 600px) {
-   
+
+      .icon {
+        width: 15%;
+        margin-right: 5%;
+        }
         .text{
         display: block;
         margin-left: 15%;

@@ -4,6 +4,8 @@ import './CSSFolder/Weather.css'
 import velWind from '../images/wind.png';
 import hot from '../images/hot.png';
 import cold from '../images/cold.png';
+import feels from '../images/feels_like.png';
+import humidity from '../images/humidity.png';
 
 
 function Clima({resultado}) {
@@ -28,9 +30,12 @@ function Clima({resultado}) {
         
             </div>
             <div className="dataPlace">
-                <p className="pos_Place"><img className="icon"  src={hot} alt="icono de alta temperatura "></img>Temperatura Máxima: {parseInt(main.temp_max - kelvin, 10)} &#x2103;</p>
-                <p className="pos_Place"><img className="icon"  src={cold} alt="icono de alta temperatura "></img>Temperatura Mínima: {parseInt(main.temp_min - kelvin, 10)} &#x2103;</p>
+                <p className="pos_Place"><img className="icon"  src={hot} alt="icono de temperatura minima o baja "></img>Temperatura Máxima: {parseInt(main.temp_max - kelvin, 10)} &#x2103;</p>
+                <p className="pos_Place"><img className="icon"  src={cold} alt="icono de alta temperatura o máxima"></img>Temperatura Mínima: {parseInt(main.temp_min - kelvin, 10)} &#x2103;</p> 
+                <p className="pos_Place"><img className="icon"  src={feels} alt="icono de sensación temperatura "></img>Sensación Térmica: {parseInt(main.feels_like - kelvin, 10)} &#x2103;</p>
+                <p className="pos_Place"><img className="icon"  src={humidity} alt="icono de humedad "></img>Humedad: {parseInt(main.humidity)}%</p>
                 <p className="pos_Place"> <img className="icon"  src={velWind} alt="velocidad del viento"></img> Velocidad del viento: {wind.speed} </p>
+               
             </div>
             </div>
         </div>
