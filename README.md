@@ -9,7 +9,7 @@ Es por esto que necesitamos contar con una aplicación web que nos ayude a revis
 ## El proyecto se puede ver en este enlace: 
 🌞🌪️🌤️⛅🌦️⛈️🌩️❄️☔
 
-https://finderweather.netlify.app/to 
+https://finderweather.netlify.app
 
 
 
