@@ -19,8 +19,10 @@ https://finderweather.netlify.app
 - CSS3 
 - MATERIALIZE CSS
 - JAVASCRIPT
+- REACT JS (React Hooks)
 
-
+## Cómo funciona? 
+Realiza un llamado a la Api Open Weather Map(openweathermap.org.), para conocer el estado del tiempo en el pais y la ciudad solicitada, desde el uso de Hooks, React.  
 
 ### Camila Rojas S. 
 
