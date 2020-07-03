@@ -73,7 +73,10 @@ img{
   }
 
   @media (max-width: 600px) {
-
+    
+    .contenedor-form {
+      padding: 0;
+    }
       .icon {
         width: 15%;
         margin-right: 5%;
@@ -112,5 +115,17 @@ img{
             line-height: 110%;
             margin-top: 4px;
         }
+
+        .App-header {
+          height: 30vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-size: calc(10px + 2vmin);
+          color: white;
+          margin: 2%;
+          margin-top: 5%;
+      }
 
     }
