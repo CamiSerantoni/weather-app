@@ -1,4 +1,4 @@
-img{
+.weather-img{
     background-size: cover;
     background-position: center center;
     border-radius: 5%;
@@ -12,13 +12,15 @@ img{
 
   .icon{
     width: 10%;
-    margin-right: 5%;
+    margin-right: 13%;
     
 
   }
 
   .pos_Place{
-    display: inline-flex;
+    display: flex;
+    color: white;
+    margin-left: 10%;
   }
 
   .text{
@@ -63,7 +65,7 @@ img{
 
   
   .dataPlace p{
-    width: 75%;
+    width: 90%;
     margin-top: 1%;
   }
 
@@ -83,17 +85,17 @@ img{
         margin-right: 5%;
         }
         .text{
-        display: block;
-        margin-left: 15%;
-        margin-top: 140%;
-        font-size: 10px;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        text-align: center;
+          display: block;
+          margin-left: 15%;
+          margin-top: 140%;
+          font-size: 10px;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          text-align: center;
         }
 
-        img{
+        .weather-img{
           background-size: cover;
           border-radius: 5%;
           background-position: center center;
