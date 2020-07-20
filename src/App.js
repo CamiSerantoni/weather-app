@@ -40,7 +40,7 @@ function App() {
  const datosConsulta = datos => {
   
       //validar que ambos campos esten 
-      if(datos.ciudad ==='' || datos.pais ===''){
+      if(  datos.pais ===''||datos.ciudad ===''){
         guardarError(true);
         return; 
       }
@@ -54,7 +54,7 @@ function App() {
   let componente;
   if(error) {
     //hay un error! 
-    componente = <Error mensaje='Estimado(a) Usuario(a) Ambos campos son necesarios'/>
+    componente = <Error mensaje='Estimado(a) usuario(a) ambos campos son necesarios'/>
   } else {
     //mostrar Clima
     componente = <Clima
