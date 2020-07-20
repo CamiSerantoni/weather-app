@@ -9,10 +9,17 @@
     background: url('/src/images/backPlace.jpg');
   }
 
+  .sens{
+    color: white;
+    display: flex;
+    margin-left: 10%;
+    font-size: larger;
+    font-weight: 700;
+  }
 
   .icon{
-    width: 10%;
-    margin-right: 13%;
+    width: 15%;
+    margin-right: 10%;
     
 
   }
@@ -130,13 +137,26 @@
           margin-top: 5%;
       }
 
-      .dataPlace {
-        border: inset;
-        border-radius: 5%;
-        width: 50%;
-        padding: 2%;
-        margin-left: inherit;
-        color: white;
-        display: table;
+    .dataPlace {
+    border: inset;
+    border-radius: 5%;
+    width: 71%;
+    padding-right: 4%;
+    margin-left: 3%;
+    color: white;
+    display: table;
     }
+
+    .dataPlace p {
+      width: 100%;
+      margin: auto;
+      margin-bottom: 4%;
+      font-size: small;
+    }
+
+    .pos_Place {
+      display: flex;
+      color: white;
+    } 
+
   }
