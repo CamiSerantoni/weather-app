@@ -8,8 +8,6 @@ import Clima from './Components/Weather';
 function App() {
 
 
-  //state principal 
-  // ciudad =state, guardarCiudad = this.setState()
   const [ciudad, guardarCiudad] = useState('');
   const [pais, guardarPais] = useState('');
   const  [error, guardarError] = useState(false);
@@ -17,7 +15,6 @@ function App() {
 
   useEffect(() =>{
 
-    //prevenir ejecución la primera vez
     if(ciudad === '') return;
 
 
@@ -43,7 +40,7 @@ function App() {
  const datosConsulta = datos => {
   
       //validar que ambos campos esten 
-      if(datos.ciudad ==='' || datos.pais ===''){
+      if(  datos.pais ===''||datos.ciudad ===''){
         guardarError(true);
         return; 
       }
@@ -56,8 +53,8 @@ function App() {
 
   let componente;
   if(error) {
-    //hay un error, mostrarlo
-    componente = <Error mensaje='Ambos campos son obligatorios'/>
+    //hay un error! 
+    componente = <Error mensaje='Estimado(a) usuario(a) ambos campos son necesarios'/>
   } else {
     //mostrar Clima
     componente = <Clima
