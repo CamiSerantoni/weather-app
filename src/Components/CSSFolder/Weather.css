@@ -27,7 +27,7 @@
   .pos_Place{
     display: flex;
     color: white;
-    margin-left: 10%;
+    margin-left: 5%;
   }
 
   .text{
@@ -160,3 +160,92 @@
     } 
 
   }
+
+  @media only screen and (min-device-width : 600px) and (max-device-width : 1024px) {
+   
+    .weather-img{
+      background-size: cover;
+      background-position: center center;
+      border-radius: 5%;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('/src/images/backPlace.jpg');
+    }
+  
+    .sens{
+      color: white;
+      display: flex;
+      margin-left: 5%;
+      font-size: medium;
+      font-weight: 700;
+    }
+  
+    .icon{
+      width: 15%;
+      margin-right: 10%;
+      
+  
+    }
+  
+    .pos_Place{
+      display: flex;
+      color: white;
+      margin-left: 5%;
+    }
+  
+    .text{
+        display: block;
+        margin-left: 51%;
+        margin-top: 25%;
+        font-size: 15px;
+        position: absolute;
+        top: 206px;
+        left: 10px;
+        text-align: center;
+  
+    }
+  
+  
+    .weather__name{
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.56rem;
+      font-weight: 600;
+      line-height: 110%;
+      color: aliceblue;
+      margin: 5% 8% 5% 4%;
+  }
+    
+  
+    .weather__Place{
+  
+      display: flex;
+    }
+  
+    .dataPlace{
+      border: inset;
+      margin-left: 1%;
+      border-radius: 5%;
+      width: 50%;
+      padding: 2%;
+      color: white;
+      display: table;
+    }
+  
+    
+    .dataPlace p{
+      width: 90%;
+      margin-top: 1%;
+    }
+  
+    .temperatura {
+      font-size: 4rem!important;
+      display: contents;
+      color: antiquewhite;
+    }
+
+
+
+
+    }
