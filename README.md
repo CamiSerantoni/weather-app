@@ -24,5 +24,5 @@ https://finderweather.netlify.app
 ## Cómo funciona? 
 Realiza un llamado a la Api Open Weather Map(openweathermap.org.), para conocer el estado del tiempo en el pais y la ciudad solicitada, desde el uso de Hooks, React.  
 
-### Camila Rojas S. 
+### Camila Serantoni R. 
 
